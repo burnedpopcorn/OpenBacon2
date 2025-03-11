@@ -8,7 +8,7 @@ This Decompilation is Completely Organized, and All code has been reviewed but n
 
 So any Crashes or Issues from the original leaked build has NOT been fixed
 <br>
-But you can easily fix that by removing the old leftover GMSound code
+But you should be able to fix them if you're really gonna use this for something
 
 ### Uh, FMOD Project?
 also Yeah, the FMOD Project is also Included
