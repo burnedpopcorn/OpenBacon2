@@ -1,0 +1,11 @@
+camera_set_view_size(view_camera[0], obj_screensizer.displayWidth, obj_screensizer.displayHeight);
+global.collectfont = __scribble_font_add_sprite_ext(font_collecthud, "0123456789", 1, 0);
+global.combofont = __scribble_font_add_sprite_ext(spr_combofnt, "inst_86405DA1", 1, 0);
+global.creditsfont = __scribble_font_add_sprite_ext(spr_creditsfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz.:!0123456789?'\"ÁÉÍÓÚáéíóú_-[]▼()&#风雨廊桥전태양*яиБжидГзвбнль↑↓←→⇧⌃␣⎋", 1, 2);
+global.buttonfont = __scribble_font_add_sprite_ext(spr_buttonfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!,.:0123456789'?-↑↓←→⇧¢␣⎋", 1, 2);
+global.bigfont = __scribble_font_add_sprite_ext(spr_bigfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZ!.inst_86405DA1:", 1, 0);
+global.smallfont = __scribble_font_add_sprite_ext(spr_smallfont, "abcdefghijklmnopqrstuvqxyzinst_86405DA1.:!?", 1, 0);
+global.npcfont = __scribble_font_add_sprite_ext(spr_npcfont, "ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz!¡,.:0123456789'?¿-áäãàâæéèêëíîïóöõôúùûüÿŸÁÄÃÀÂÉÈÊËÍÎÏÓÖÕÔÚÙÛÜÇç", true, 2);
+global.showcollisions = true;
+global.debug = false;
+pal_swap_init_system(shd_pal_swapper);

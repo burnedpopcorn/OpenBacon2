@@ -1,0 +1,13 @@
+depth = -999;
+gameframe_init();
+global.gameframe_caption_text = "Game Adventure New bacon2";
+global.gameframe_caption_icon = spr_ico;
+mouse_in_window = false;
+gameframe_visible_time = 60;
+mouseX = mouse_x;
+mouseY = mouse_y;
+displayWidth = 960;
+displayHeight = 540;
+screenWidth = display_get_width();
+screenHeight = display_get_height();
+__display_set_gui_size_hook(displayWidth, displayHeight);

@@ -1,0 +1,1 @@
+text = "You know, every time you turn that Freaky Frown Upside Dowm, your Smile Meter increases and you can become the SIGMA SMILER!!! Thats just a rumor tho, why would you ever want to leave when you can stay in the Rizz Party forever?";

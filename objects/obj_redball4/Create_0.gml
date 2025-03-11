@@ -1,0 +1,18 @@
+spr_walk = spr_redball4walk;
+spr_scared = spr_redball4scared;
+spr_dead = spr_redball4dead;
+spr_stun = spr_redball4stun;
+scr_collision_init();
+state = baddiestates.move;
+scaredtimer = 0;
+xscale = sign(image_xscale);
+grav = 0.5;
+movespeed = 0;
+image_speed = 0.35;
+stunbuffer = 15;
+hitHsp = 0;
+hitVsp = 0;
+event_inherited();
+hitX = y;
+hitY = x;
+hitstuntimer = 0;

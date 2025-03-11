@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="AudioFile" id="{fbfd37ce-ee2a-47cb-b79c-7b652affc497}">
+    <property name="assetPath">
+      <value>Sfx/Scream.ogg</value>
+    </property>
+    <property name="frequencyInKHz">
+      <value>48</value>
+    </property>
+    <property name="channelCount">
+      <value>2</value>
+    </property>
+    <property name="length">
+      <value>3.2946665</value>
+    </property>
+    <relationship name="masterAssetFolder">
+      <destination>{ff0efdbe-3d85-4d9f-823d-8355cdd835a6}</destination>
+    </relationship>
+  </object>
+</objects>

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scribble_refresh_everything",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scribble_refresh_everything",
+  "parent":{
+    "name":"Other",
+    "path":"folders/Extensions/Scribble/Other.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

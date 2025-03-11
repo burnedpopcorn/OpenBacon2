@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+  <object class="AudioFile" id="{d61ce8d1-f0cc-4185-990f-d18804fe9abf}">
+    <property name="assetPath">
+      <value>Music/DINGDINGDINGDINGWAKETHEFUCKUP.ogg</value>
+    </property>
+    <property name="frequencyInKHz">
+      <value>48</value>
+    </property>
+    <property name="channelCount">
+      <value>2</value>
+    </property>
+    <property name="length">
+      <value>222.81734</value>
+    </property>
+    <relationship name="masterAssetFolder">
+      <destination>{ff0efdbe-3d85-4d9f-823d-8355cdd835a6}</destination>
+    </relationship>
+  </object>
+</objects>
