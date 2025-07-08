@@ -2,12 +2,12 @@ OpenBacon
 	A Bacon2 Decompilation
 		by burnedpopcorn180
 	
-GameMaker Version Used: 2024.8
+GameMaker Version Used: 2024.8.1.171
 	
 Uses Scribble 8.2, Mr Unown's FMOD Wrapper and Collisions, Gameframe, RT Shell
 
 Probably my best Decomp to date, since I organized them myself without stealing it
-And I manually checked all code (Objects and Sprites)
+And I manually checked all code (Objects, Sprites, and Room CC)
 Plus Enums!
 
 The Audio related Crashes from the original build are still here, but you can simply just remove them
