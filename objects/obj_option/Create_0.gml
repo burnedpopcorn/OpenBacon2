@@ -8,6 +8,21 @@ BGX = wave(-32, 32, 5, 0);
 BGY = 0;
 slidersnd = fmod_createEventInstance("event:/Sfx/slider");
 
+enum option
+{
+	// menus
+	main,
+	audio,
+	video,
+	controls,
+	game,
+	
+	// for display
+	anchor_center,
+	anchor_left
+}
+
+#region Menu Functions
 function goto_menu(menu)
 {
     for (var i = 0; i < array_length(menus); i++)
@@ -61,21 +76,9 @@ function add_option_ext(_option, _type, _name, _func, _val, _maxval, _toggle = [
     array_push(_option.options, q);
     return q;
 }
+#endregion
 
-enum option
-{
-	// menus
-	main,
-	audio,
-	video,
-	controls,
-	game,
-	
-	// for display
-	anchor_center,
-	anchor_left
-}
-
+#region Main Menu
 var category = create_menu(option.main, option.anchor_center, 48, function()
 {
     instance_destroy();
@@ -97,6 +100,9 @@ add_option_press(category, "GAME", function()
     goto_menu(option.game);
 });
 array_push(menus, category);
+#endregion
+
+#region Audio Submenu
 var AUDIO = create_menu(option.audio, option.anchor_left, 48, function()
 {
     goto_menu(option.main);
@@ -133,6 +139,8 @@ add_option_ext(AUDIO, 2, "SFX", function()
     quick_save("General", "Sfx", global.SfxVolume);
 }, global.SfxVolume * 100, 100);
 array_push(menus, AUDIO);
+#endregion
+#region Video Submenu
 var VIDEO = create_menu(option.video, option.anchor_left, 48, function()
 {
     goto_menu(option.main);
@@ -162,6 +170,8 @@ add_option_ext(VIDEO, 1, "VSYNC", function()
     quick_save("General", "Vsync", global.Vsync);
 }, global.Vsync, 1);
 array_push(menus, VIDEO);
+#endregion
+#region Controls Submenu (Unimplimented)
 var CONTROLS = create_menu(option.controls, option.anchor_left, 48, function()
 {
     goto_menu(option.main);
@@ -171,6 +181,8 @@ add_option_press(CONTROLS, "BACK", function()
     goto_menu(option.main);
 });
 array_push(menus, CONTROLS);
+#endregion
+#region Game Submenu (Unimplimented)
 var GAME = create_menu(option.game, option.anchor_left, 48, function()
 {
     goto_menu(option.main);
@@ -180,3 +192,4 @@ add_option_press(GAME, "BACK", function()
     goto_menu(option.main);
 });
 array_push(menus, GAME);
+#endregion

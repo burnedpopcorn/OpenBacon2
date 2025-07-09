@@ -1,15 +1,15 @@
 function scr_tufekinput()
 {
     ini_open("options.ini");
-    global.key_left = [ini_read_real("Keyboard", "Left", 37), ini_read_real("Controller", "Left", 32783)];
-    global.key_up = [ini_read_real("Keyboard", "Up", 38), ini_read_real("Controller", "Up", 32781)];
-    global.key_down = [ini_read_real("Keyboard", "Down", 40), ini_read_real("Controller", "Down", 32782)];
-    global.key_right = [ini_read_real("Keyboard", "Right", 39), ini_read_real("Controller", "Right", 32784)];
-    global.key_jump = [ini_read_real("Keyboard", "Jump", 90), ini_read_real("Controller", "Jump", 32769)];
-    global.key_attack = [ini_read_real("Keyboard", "Attack", 16), ini_read_real("Controller", "Attack", 32771)];
-    global.key_slap = [ini_read_real("Keyboard", "Slap", 88), ini_read_real("Controller", "Slap", 32772)];
-    global.key_taunt = [ini_read_real("Keyboard", "Boomerang", 67), ini_read_real("Controller", "Boomerang", 32770)];
-    global.key_start = [ini_read_real("Keyboard", "Start", 27), ini_read_real("Controller", "Start", 32778)];
+    global.key_left = [ini_read_real("Keyboard", "Left", vk_left), ini_read_real("Controller", "Left", gp_padl)];
+    global.key_up = [ini_read_real("Keyboard", "Up", vk_up), ini_read_real("Controller", "Up", gp_padu)];
+    global.key_down = [ini_read_real("Keyboard", "Down", vk_down), ini_read_real("Controller", "Down", gp_padd)];
+    global.key_right = [ini_read_real("Keyboard", "Right", vk_right), ini_read_real("Controller", "Right", gp_padr)];
+    global.key_jump = [ini_read_real("Keyboard", "Jump", ord("Z")), ini_read_real("Controller", "Jump", gp_face1)];
+    global.key_attack = [ini_read_real("Keyboard", "Attack", vk_shift), ini_read_real("Controller", "Attack", gp_face3)];
+    global.key_slap = [ini_read_real("Keyboard", "Slap", ord("X")), ini_read_real("Controller", "Slap", gp_face4)];
+    global.key_taunt = [ini_read_real("Keyboard", "Boomerang", ord("C")), ini_read_real("Controller", "Boomerang", gp_face2)];
+    global.key_start = [ini_read_real("Keyboard", "Start", vk_escape), ini_read_real("Controller", "Start", gp_start)];
     ini_close();
 }
 
@@ -52,10 +52,10 @@ function scr_getinput()
 
 function gamepad_check_any(device)
 {
-    for (var i = 32769; i < 32788; i++)
+    for (var i = gp_face1; i < gp_axisrv; i++)
     {
         if (gamepad_button_check(device, i))
-            return 1;
+            return true;
     }
 }
 
@@ -65,35 +65,35 @@ function scr_getkeys(key)
     
     switch (key)
     {
-        case 37:
+        case vk_left:
             _char = "LEFT";
             break;
         
-        case 39:
+        case vk_right:
             _char = "RIGHT";
             break;
         
-        case 38:
+        case vk_up:
             _char = "UP";
             break;
         
-        case 40:
+        case vk_down:
             _char = "DOWN";
             break;
         
-        case 16:
+        case vk_shift:
             _char = "SHIFT";
             break;
         
-        case 32:
+        case vk_space:
             _char = "SPACE";
             break;
         
-        case 17:
+        case vk_control:
             _char = "CONTROL";
             break;
         
-        case 27:
+        case vk_escape:
             _char = "ESCAPE";
             break;
     }
@@ -108,16 +108,18 @@ function scr_numtokey(key)
     
     switch (key)
     {
-        case 38:
-        case 37:
-        case 27:
-        case 16:
-        case 32:
-        case 39:
-        case 40:
+        case vk_up:
+        case vk_left:
+        case vk_escape:
+        case vk_shift:
+        case vk_space:
+        case vk_right:
+        case vk_down:
             _realkey = scr_getkeys(key);
             break;
         
+		// uhhhh
+		// these idk, but i don't think they're used anyways
         case 163:
             _realkey = "¢";
             break;
