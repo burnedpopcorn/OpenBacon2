@@ -3,6 +3,11 @@ A Decompilation of the leaked Bacon2 build (and the FMOD Project as well)
 
 GameMaker Version Used: ```2024.8.1.171```
 
+> [!NOTE]
+> I have made a decompilation of the cafetest1 build [here](https://github.com/burnedpopcorn/OpenBacon2-Updated)
+> 
+> That build is much more recent, so consider using that one instead
+
 ### ABOUT
 This Decompilation is Completely Organized, and All code has been reviewed but not modified
 
