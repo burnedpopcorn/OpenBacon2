@@ -18,3 +18,7 @@ No, it's not leaked
 Thanks to my and CatMateo's [FMOD Decompiler](https://github.com/stuttermess/FMOD-Decompiler/), the full FMOD Project is yours to edit and mess around with
 <br>
 so have fun with it
+
+ALSO
+<br>
+If you want to use GMSound rather than FMOD, then [check out this branch](https://github.com/burnedpopcorn/OpenBacon2/tree/GMSound-Port), which makes those changes and more!
