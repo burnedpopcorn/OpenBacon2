@@ -12,7 +12,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
     instance_create_depth(x, y, -1, obj_slapstar);
     instance_create_depth(x, y, -1, obj_slapstar);
     ds_list_add(global.saveroom, id);
-    fmod_soundeffect_3d(x, y, "event:/Sfx/killenemy");
+    scr_soundeffect_3d(killenemy, x, y);
     global.combo += 1;
     global.combotime = 60;
     global.collect += 20;

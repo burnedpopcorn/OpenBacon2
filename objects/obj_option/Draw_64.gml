@@ -21,8 +21,8 @@ var _length = array_length(opt);
 switch (m.anchor)
 {
     case option.anchor_center:
-        var xx = obj_screensizer.displayWidth / 2;
-        var yy = (obj_screensizer.displayHeight / 2) - ((m.ypad * _length) / 2);
+        var xx = 960 / 2;
+        var yy = (540 / 2) - ((m.ypad * _length) / 2);
         
         for (var i = 0; i < _length; i++)
         {
@@ -34,8 +34,8 @@ switch (m.anchor)
         break;
     
     case option.anchor_left:
-        var xx = obj_screensizer.displayWidth / 5;
-        var yy = (obj_screensizer.displayHeight / 2) - ((m.ypad * _length) / 2);
+        var xx = 960 / 5;
+        var yy = (540 / 2) - ((m.ypad * _length) / 2);
         
         for (var i = 0; i < _length; i++)
         {
@@ -51,13 +51,13 @@ switch (m.anchor)
                 case 1:
                     var _col = (_sel == i) ? "[c_white]" : "[c_grey]";
                     draw_text_scribble(xx, yy + (m.ypad * i), _col + "[spr_bigfont][fa_left]" + q.name);
-                    draw_text_scribble(obj_screensizer.displayWidth - xx, yy + (m.ypad * i), _col + "[spr_bigfont][fa_right]" + q.toggle[q.val]);
+                    draw_text_scribble(960 - xx, yy + (m.ypad * i), _col + "[spr_bigfont][fa_right]" + q.toggle[q.val]);
                     break;
                 
                 case 2:
                     var _col = (_sel == i) ? "[c_white]" : "[c_grey]";
                     draw_text_scribble(xx, yy + (m.ypad * i), _col + "[spr_bigfont][fa_left]" + q.name);
-                    draw_text_scribble(obj_screensizer.displayWidth - xx, yy + (m.ypad * i), _col + "[spr_bigfont][fa_right]" + string(round(q.val)));
+                    draw_text_scribble(960 - xx, yy + (m.ypad * i), _col + "[spr_bigfont][fa_right]" + string(round(q.val)));
                     break;
             }
         }

@@ -11,7 +11,7 @@ if (key_start2 && !active)
     audio_pause_all();
     active = true;
     screensprite = sprite_create_from_surface(application_surface, 0, 0, surface_get_width(application_surface), surface_get_height(application_surface), false, false, 0, 0);
-    var surface = surface_create(obj_screensizer.displayWidth, obj_screensizer.displayHeight);
+    var surface = surface_create(960, 540);
     
     if (surface_exists(surface))
     {
@@ -48,21 +48,19 @@ if (key_start2 && !active)
         }
         
         surface_reset_target();
-        guisprite = sprite_create_from_surface(surface, 0, 0, obj_screensizer.displayWidth, obj_screensizer.displayHeight, false, false, 0, 0);
+        guisprite = sprite_create_from_surface(surface, 0, 0, 960, 540, false, false, 0, 0);
         surface_free(surface);
     }
     
     instance_deactivate_all(true);
     instance_activate_object(obj_inputcontroller);
-    instance_activate_object(obj_screensizer);
     instance_activate_object(obj_shell);
-    instance_activate_object(obj_fmod);
-    fmod_event_setPause_all(true);
+    audio_pause_all();
     
-    if (!event_isplaying(pausemu))
-        fmod_event_play(pausemu);
-    
-    fmod_event_setPause(pausemu, false);
+	if (!audio_is_playing(pausemu))
+		scr_music(pausemu);
+		
+	//audio_pause_sound(pausemu);
 }
 
 if (active == 1 && !instance_exists(obj_option))
@@ -100,7 +98,3 @@ if (active == 1 && !instance_exists(obj_option))
         }
     }
 }
-
-fmod_global_setParameter("SfxVolume", global.SfxVolume, true);
-fmod_global_setParameter("MusicVolume", global.MusicVolume, true);
-fmod_global_setParameter("MasterVolume", global.MasterVolume, true);

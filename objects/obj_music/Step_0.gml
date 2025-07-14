@@ -3,21 +3,27 @@ if (global.escape)
     if (panicstart == false)
     {
         panicstart = true;
-        fmod_event_play(escape);
-        fmod_event_stop(global.music, true);
+        scr_music(SIGMASIGMAONTHEWALL);
+        audio_stop_sound(global.music);
     }
     else
     {
-        var s = 0;
-        
+		// lap 2
         if (global.lap)
-            s = 2;
-        
-        fmod_event_setParameter(escape, "state", s, false);
+		{
+			if (audio_is_playing(SIGMASIGMAONTHEWALL))
+				audio_stop_sound(SIGMASIGMAONTHEWALL);
+			if (!audio_is_playing(DINGDINGDINGDINGWAKETHEFUCKUP))
+				scr_music(DINGDINGDINGDINGWAKETHEFUCKUP);
+		}
     }
 }
 else
 {
     panicstart = false;
-    fmod_event_stop(escape, true);
+	if (audio_is_playing(SIGMASIGMAONTHEWALL))
+		audio_stop_sound(SIGMASIGMAONTHEWALL);
+		
+	if (audio_is_playing(DINGDINGDINGDINGWAKETHEFUCKUP))
+		audio_stop_sound(DINGDINGDINGDINGWAKETHEFUCKUP);
 }

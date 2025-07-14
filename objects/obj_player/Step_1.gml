@@ -1,27 +1,31 @@
-fmod_listener_setPosition(0, x, y, 0);
-
 if (state == states.mach2 || state == states.mach3 || state == states.wallclimb)
 {
-    fmod_event_setPause(machsnd, false);
-    
-    if (!event_isplaying(machsnd))
-        fmod_event_play(machsnd);
-    
-    var s = 0;
+    //audio_stop_sound(machsnd);
+	var prevmachsnd = machsnd;
+
+    var s = 1;
     
     if (state == states.mach2 && sprite_index == spr_player_mach1 && grounded)
-        s = 0;
-    else if ((state == states.mach2 && sprite_index != spr_player_mach1) || state == states.wallclimb)
         s = 1;
-    else if (state == states.mach3 && sprite_index != spr_player_mach4)
+    else if ((state == states.mach2 && sprite_index != spr_player_mach1) || state == states.wallclimb)
         s = 2;
-    else if (sprite_index == spr_player_mach4)
+    else if (state == states.mach3 && sprite_index != spr_player_mach4)
         s = 3;
+    else if (sprite_index == spr_player_mach4)
+        s = 4;
     
-    fmod_event_set3DPosition(machsnd, x, y, 0);
-    fmod_event_setParameter(machsnd, "state", s, true);
+	machsnd = asset_get_index("sfx_mach" + string(s));
+	
+	if (machsnd != prevmachsnd)
+	{
+		audio_stop_sound(prevmachsnd);
+		scr_soundeffect_3d(machsnd, x, y, 0, true);
+	}
 }
 else
-    fmod_event_stop(machsnd, true);
+{
+    audio_stop_sound(machsnd);
+	machsnd = sfx_mach1;
+}
 
 scr_collide_destructibles();

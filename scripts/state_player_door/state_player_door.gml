@@ -32,7 +32,7 @@ function scr_player_walkfront()
                     obj_camera.shake = 15;
                 }
                 
-                fmod_soundeffect_3d(x, y, "event:/Sfx/gateslam");
+                scr_soundeffect_3d(gateslam, x, y);
             }
             else
             {

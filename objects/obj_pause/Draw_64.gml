@@ -2,7 +2,7 @@ if (active)
 {
     draw_set_color(c_black);
     draw_set_alpha(1);
-    draw_rectangle(0, 0, obj_screensizer.displayWidth, obj_screensizer.displayHeight, false);
+    draw_rectangle(0, 0, 960, 540, false);
     draw_set_color(c_white);
     draw_set_alpha(1);
     draw_sprite(screensprite, 0, 0, 0);
@@ -16,8 +16,8 @@ if (active)
     {
         if (!ds_list_empty(options))
         {
-            var xx = obj_screensizer.displayWidth / 2;
-            var yy = (obj_screensizer.displayHeight / 2) - (48 * (ds_list_size(options) - 2));
+            var xx = 960 / 2;
+            var yy = (540 / 2) - (48 * (ds_list_size(options) - 2));
             
             for (var i = 0; i < ds_list_size(options); i++)
             {

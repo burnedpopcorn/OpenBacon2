@@ -1,20 +1,16 @@
 # OpenBacon2
-A Decompilation of the leaked Bacon2 build (and the FMOD Project as well)
+A Decompilation of the leaked Bacon2 build
 
 GameMaker Version Used: ```2024.8.1.171```
 
 ### ABOUT
-This Decompilation is Completely Organized, and All code has been reviewed but not modified
+THIS BRANCH MAKES SOME PRETTY BIG MODIFICATIONS
 
-So any Crashes or Issues from the original leaked build has NOT been fixed
-<br>
-But you should be able to fix them if you're really gonna use this for something
+Changes:
+	- Removed FMOD and replaced it with GMSound
+	- Removed Gameframe
+	- Fixed Startgate crash from the original build
+	
 
-### Uh, FMOD Project?
-also Yeah, the FMOD Project is also Included
-<br>
-No, it's not leaked
-
-Thanks to my and CatMateo's [FMOD Decompiler](https://github.com/stuttermess/FMOD-Decompiler/), the full FMOD Project is yours to edit and mess around with
-<br>
-so have fun with it
+This branch is basically just the source code for my bacon2 Web Port, and these changes were needed to make everything compatiable with that platform. 
+This should only be used if you're porting bacon2 to another platform, or if you just really dislike FMOD and/or Gameframe

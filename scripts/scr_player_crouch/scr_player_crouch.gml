@@ -66,7 +66,7 @@ function scr_player_crouch()
     if (key_jump2 && grounded)
     {
         create_particle(spr_highjump, x, y, 1);
-        fmod_soundeffect_3d(x, y, "event:/Sfx/jump");
+        scr_soundeffect_3d(jump, x, y);
         sprite_index = spr_player_crouchjump;
         jumpstop = false;
         image_index = 0;

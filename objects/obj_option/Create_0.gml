@@ -6,7 +6,7 @@ move = 0;
 backgrounds = [[0, 1], [1, 0], [2, 0], [4, 0], [3, 0]];
 BGX = wave(-32, 32, 5, 0);
 BGY = 0;
-slidersnd = fmod_createEventInstance("event:/Sfx/slider");
+slidersnd = sfx_collectbig;
 
 enum option
 {
@@ -119,6 +119,8 @@ add_option_ext(AUDIO, 2, "MASTER", function()
     global.MasterVolume = q.val / 100;
     q.val = global.MasterVolume * 100;
     quick_save("General", "Master", global.MasterVolume);
+	
+	audio_master_gain(global.MasterVolume);
 }, global.MasterVolume * 100, 100);
 add_option_ext(AUDIO, 2, "MUSIC", function()
 {
@@ -128,6 +130,8 @@ add_option_ext(AUDIO, 2, "MUSIC", function()
     global.MusicVolume = q.val / 100;
     q.val = global.MusicVolume * 100;
     quick_save("General", "Music", global.MusicVolume);
+	
+	audio_group_set_gain(audiogroup_mus, global.MusicVolume, 0);
 }, global.MusicVolume * 100, 100);
 add_option_ext(AUDIO, 2, "SFX", function()
 {
@@ -137,6 +141,8 @@ add_option_ext(AUDIO, 2, "SFX", function()
     global.SfxVolume = q.val / 100;
     q.val = global.SfxVolume * 100;
     quick_save("General", "Sfx", global.SfxVolume);
+	
+	audio_group_set_gain(audiogroup_sfx, global.SfxVolume, 0);
 }, global.SfxVolume * 100, 100);
 array_push(menus, AUDIO);
 #endregion

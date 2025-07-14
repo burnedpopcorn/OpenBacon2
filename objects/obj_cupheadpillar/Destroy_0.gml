@@ -6,7 +6,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
         sprite_index = spr_cuphead_dead;
     }
     
-    fmod_soundeffect("event:/Sfx/cupdead");
+    scr_soundeffect_2d(sfx_cupdead);
     ds_list_add(global.saveroom, id);
     instance_create_depth(x, y, -500, obj_flash);
     instance_create_depth(x, y, -300, obj_sigmasigma);

@@ -8,7 +8,7 @@ global.escape = false;
 audio_stop_sound(global.music);
 
 // old rank code
-rankmusic = scr_soundeffect_2d(mu_rankPLACEHOLDER); // if you want a working build, remove this
+rankmusic = scr_soundeffect_2d(gateslam);//scr_soundeffect_2d(mu_rankPLACEHOLDER);
 shownrank = false;
 rankindex = 0;
 layer_enable_fx("Effect_1", false);

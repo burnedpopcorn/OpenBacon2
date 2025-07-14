@@ -20,7 +20,7 @@ if (place_meeting(x, y, obj_player))
             hitstuntimer = 5;
             hitstun = true;
             obj_camera.shake = 10;
-            fmod_soundeffect_3d(x, y, "event:/Sfx/punch");
+            scr_soundeffect_3d(punch, x, y);
             baddieID.state = baddiestates.hit;
             
             if (key_jump)

@@ -2,7 +2,7 @@ function do_taunt()
 {
     if (key_taunt2)
     {
-        fmod_soundeffect_3d(x, y, "event:/Sfx/taunt");
+        scr_soundeffect_3d(choose(sfx_taunt1, sfx_taunt2, sfx_taunt3), x, y);
         tauntsavedState = state;
         tauntsavedSprite = sprite_index;
         tauntsavedIndex = image_index;

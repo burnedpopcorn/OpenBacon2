@@ -83,6 +83,8 @@ else if (hitstuntimer <= 0)
     }
     
     if (place_meeting_solid(x, y))
+	{
         while (place_meeting_solid(x, y))
             y--;
+	}
 }

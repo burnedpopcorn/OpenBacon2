@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"sfx_taunt3",
+  "audioGroupId":{
+    "name":"audiogroup_sfx",
+    "path":"audiogroups/audiogroup_sfx",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":0.409333,
+  "name":"sfx_taunt3",
+  "parent":{
+    "name":"Sfx",
+    "path":"folders/Sounds/Sfx.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sfx_taunt3.ogg",
+  "type":0,
+  "volume":1.0,
+}

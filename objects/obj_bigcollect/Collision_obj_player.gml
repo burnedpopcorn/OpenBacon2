@@ -4,5 +4,5 @@ randomize();
 create_collect(sprite_index, x, y);
 ds_list_add(global.saveroom, id);
 instance_destroy();
-fmod_soundeffect_3d(x, y, "event:/Sfx/collect2");
-fmod_soundeffect_3d(x, y, "event:/Sfx/bigcollect");
+scr_soundeffect_3d(sfx_kaching, x, y);
+scr_soundeffect_3d(choose(sfx_riff1, sfx_riff2), x, y);

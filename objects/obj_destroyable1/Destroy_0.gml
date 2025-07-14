@@ -1,7 +1,7 @@
 if (ds_list_find_index(global.saveroom, id) == -1)
 {
     ds_list_add(global.saveroom, id);
-    fmod_soundeffect_3d(x, y, "event:/Sfx/breakblock");
+    scr_soundeffect_3d(choose(sfx_breakblock1, sfx_breakblock2), x, y);
     
     repeat (2)
     {

@@ -7,5 +7,5 @@ collect = 0;
 collectshake = 0;
 collectables = ds_list_create();
 escapeshake = 0;
-zoomw = obj_screensizer.displayWidth;
-zoomh = obj_screensizer.displayHeight;
+zoomw = 960;
+zoomh = 540;

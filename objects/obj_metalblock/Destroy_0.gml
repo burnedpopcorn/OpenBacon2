@@ -1,7 +1,7 @@
 if (ds_list_find_index(global.saveroom, id) == -1)
 {
     ds_list_add(global.saveroom, id);
-    fmod_soundeffect_3d(x, y, "event:/Sfx/metalbreak");
+    scr_soundeffect_3d(metalblock, x, y);
     obj_camera.shake = 30;
     
     repeat (2)

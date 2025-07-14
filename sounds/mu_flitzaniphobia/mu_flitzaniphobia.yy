@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"mu_flitzaniphobia",
+  "audioGroupId":{
+    "name":"audiogroup_mus",
+    "path":"audiogroups/audiogroup_mus",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":38.934666,
+  "name":"mu_flitzaniphobia",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"mu_flitzaniphobia.ogg",
+  "type":0,
+  "volume":1.0,
+}

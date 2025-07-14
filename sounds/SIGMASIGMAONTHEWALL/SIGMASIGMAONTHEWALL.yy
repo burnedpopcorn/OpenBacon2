@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"SIGMASIGMAONTHEWALL",
+  "audioGroupId":{
+    "name":"audiogroup_mus",
+    "path":"audiogroups/audiogroup_mus",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":266.38535,
+  "name":"SIGMASIGMAONTHEWALL",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"SIGMASIGMAONTHEWALL.ogg",
+  "type":0,
+  "volume":1.0,
+}

@@ -1,2 +1,2 @@
-v = obj_screensizer.displayHeight + 20;
+v = 540 + 20;
 image_speed = 0.35;

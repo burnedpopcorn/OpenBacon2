@@ -16,7 +16,7 @@ if (other.key_up2 && other.state == states.normal && other.grounded)
         ds_list_clear(global.saveroom);
         sprite_index = spr_player_entergate;
         image_index = 0;
-        fmod_event_stop_all(false);
+        audio_stop_all();
         obj_music.lock = true;
     }
 }

@@ -1,1 +1,0 @@
-gameframe_draw();

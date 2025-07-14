@@ -8,7 +8,7 @@ border2pos = [704, 384];
 gradientpos = 540;
 options = ds_list_create();
 snoozes = ds_list_create();
-pausemu = fmod_createEventInstance("event:/Music/pause");
+pausemu = mu_pause;
 
 function create_option(_option, _func)
 {
@@ -67,8 +67,8 @@ function update_snooze()
 create_option("RESUME", function()
 {
     instance_activate_all();
-    fmod_event_setPause_all(false);
-    fmod_event_stop(pausemu, true);
+    audio_resume_all();
+    audio_stop_sound(pausemu);
     active = 0;
 });
 create_option("OPTIONS", function()
@@ -93,8 +93,8 @@ create_option("RESTART", function()
         
         with (obj_music)
         {
-            fmod_event_stop_all(true);
-            currentmusic = "";
+            audio_stop_all();
+            currentmusic = -4;
             global.music = -4;
         }
     }
@@ -123,8 +123,8 @@ create_option("EXIT LEVEL", function()
         
         with (obj_music)
         {
-            fmod_event_stop_all(true);
-            currentmusic = "";
+            audio_stop_all();
+            currentmusic = -4;
             global.music = -4;
         }
         

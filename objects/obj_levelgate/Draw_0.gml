@@ -25,8 +25,8 @@ if (!ds_list_empty(gateinfo))
             }
             else
             {
-                q.bgx = (obj_screensizer.displayWidth - (camera_get_view_x(view_camera[0]) * 0.05)) + (obj_screensizer.displayWidth / 5);
-                q.bgy = (obj_screensizer.displayHeight - (camera_get_view_y(view_camera[0]) * 0.05) - (obj_screensizer.displayHeight / 2)) + 8;
+                q.bgx = (960 - (camera_get_view_x(view_camera[0]) * 0.05)) + (960 / 5);
+                q.bgy = (540 - (camera_get_view_y(view_camera[0]) * 0.05) - (540 / 2)) + 8;
             }
             
             draw_sprite_tiled(q.sprite_index, q.image_index, q.bgx, _bgyoffset + q.bgy);

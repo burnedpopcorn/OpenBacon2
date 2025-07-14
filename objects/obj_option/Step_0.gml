@@ -54,16 +54,16 @@ if (q.type == 2)
     {
         q.moving = true;
         
-        if (!event_isplaying(slidersnd))
-            fmod_event_play(slidersnd);
+        if (!audio_is_playing(slidersnd))
+            scr_soundeffect_2d(slidersnd);
         
-        fmod_global_setParameter("SliderVolume", q.val / 100, true);
+        set_audio_gain(slidersnd, q.val / 100);
     }
     else
     {
         q.moving = false;
         
-        if (event_isplaying(slidersnd))
-            fmod_event_stop(slidersnd, false);
+        if (audio_is_playing(slidersnd))
+            audio_stop_sound(slidersnd);
     }
 }

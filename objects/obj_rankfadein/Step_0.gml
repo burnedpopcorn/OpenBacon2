@@ -3,8 +3,8 @@ fadeAlpha = approach(fadeAlpha, 1, 0.1);
 with (obj_player)
 {
     image_speed = 0.35;
-    var targetx = (obj_screensizer.displayWidth / 2) + camera_get_view_x(view_camera[0]);
-    var targety = (obj_screensizer.displayHeight / 2) + camera_get_view_y(view_camera[0]);
+    var targetx = (960 / 2) + camera_get_view_x(view_camera[0]);
+    var targety = (540 / 2) + camera_get_view_y(view_camera[0]);
     x = approach(x, targetx, 1);
     y = approach(y, targety, 1);
     

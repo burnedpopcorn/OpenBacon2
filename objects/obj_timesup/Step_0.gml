@@ -3,8 +3,8 @@ switch (part)
     case 0:
         with (obj_player)
         {
-            x = obj_screensizer.displayWidth / 2;
-            y = obj_screensizer.displayHeight / 2;
+            x = 960 / 2;
+            y = 540 / 2;
             sprite_index = spr_player_timesup;
             image_index = 0;
             hsp = 0;

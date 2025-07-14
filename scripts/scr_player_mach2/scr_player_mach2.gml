@@ -44,7 +44,7 @@ function scr_player_mach2()
     
     if (key_jump2 && grounded)
     {
-        fmod_soundeffect_3d(x, y, "event:/Sfx/jump");
+        scr_soundeffect_3d(jump, x, y);
         sprite_index = spr_player_secondjump;
         jumpstop = false;
         image_index = 0;
@@ -70,7 +70,7 @@ function scr_player_mach2()
     
     if (!key_attack && grounded)
     {
-        fmod_soundeffect_3d(x, y, "event:/Sfx/machend");
+        scr_soundeffect_3d(mach_end, x, y);
         sprite_index = spr_player_machslidestart;
         image_index = 0;
         image_speed = 0.35;
@@ -98,7 +98,7 @@ function scr_player_mach2()
     
     if (move != 0 && move != xscale && grounded)
     {
-        fmod_soundeffect_3d(x, y, "event:/Sfx/machturn");
+        scr_soundeffect_3d(mach_turn, x, y);
         sprite_index = spr_player_machslideboost;
         image_index = 0;
         image_speed = 0.35;

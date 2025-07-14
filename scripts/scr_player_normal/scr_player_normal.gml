@@ -68,7 +68,7 @@ function scr_player_normal()
     
     if (key_jump2 && grounded)
     {
-        fmod_soundeffect_3d(x, y, "event:/Sfx/jump");
+        scr_soundeffect_3d(jump, x, y);
         create_particle(spr_highjump, x, y, 1);
         state = states.jump;
         sprite_index = spr_player_jump;

@@ -47,4 +47,4 @@ if (global.fill[1] < 10)
     second = "0" + string(global.fill[1]);
 
 if (global.escape)
-    draw_text_scribble(obj_screensizer.displayWidth / 2, 150, "[fa_center][c_white][spr_creditsfont]" + string(global.fill[0]) + ":" + second);
+    draw_text_scribble(960 / 2, 150, "[fa_center][c_white][spr_creditsfont]" + string(global.fill[0]) + ":" + second);

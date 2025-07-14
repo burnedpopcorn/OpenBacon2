@@ -20,7 +20,7 @@ function scr_soundeffect_2d(snd, pitch = 0, looping = false)
 
 function scr_soundeffect_3d(snd, _x, _y, pitch = 0, looping = false)
 {
-    var _s = audio_play_sound_at(snd, -_x, _y, 0, obj_screensizer.displayWidth, obj_screensizer.displayWidth * 5, 3, looping, 0);
+    var _s = audio_play_sound_at(snd, -_x, _y, 0, 960, 960 * 5, 3, looping, 0);
     audio_sound_pitch(_s, 1 + pitch);
     set_audio_gain(_s, audio_sound_get_gain(snd) * global.SfxVolume);
     return _s;
